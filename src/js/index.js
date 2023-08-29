@@ -18,12 +18,16 @@ function incluir(){
     listar();
 }
 
-function listar(){
 //Fica rodando, pegando o valor da posição e atribuindo na variável
+function listar(){
+    ulLista.innerHTML='';
     for(let nome of listaDeAtendimento){
-        console.log(nome);
+            let li = document.createElement('li')
+            li.classList.add('list-group-item')
+            li.textContent = nome
+            ulLista.appendChild(li)
+        }
     }
-}
 
 //Eventos
 //Quando houver o click no botão chama a função 'incluir'
